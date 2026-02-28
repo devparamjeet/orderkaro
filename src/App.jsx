@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import BannerCard from './components/BannerCard'
 import MiniCard from './components/MiniCard'
+import Product from './components/Product'
 
 const App = () => {
 
-  const [imgURL , setImgURL] = useState([
+  const [imgURL, setImgURL] = useState([
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
@@ -27,6 +28,10 @@ const App = () => {
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png"
   ])
+
+  const [products, setProducts] = useState()
+
+  console.log(products[0])
 
   return (
     <div className='w-full h-screen'>
@@ -54,6 +59,11 @@ const App = () => {
             return <MiniCard img={val} />
           })}
         </div>
+
+        <Product data={products[0]}/>
+        <Product data={products[1]}/>
+        {/* <Product /> */}
+
       </section>
     </div>
   )
