@@ -1,9 +1,13 @@
 import React from 'react'
 
-const BannerCard = (props) => {
+const BannerCard = ({ img }) => {
     return (
-        <div className='w-[27%] h-full bg-gray-500 rounded-2xl'>
-            <img src={props.img} className='w-full h-full object-cover' alt="" />
+        <div className='w-full h-36 sm:h-40 md:h-48 rounded-2xl overflow-hidden shadow-sm group cursor-pointer'>
+            <img
+                src={img}
+                className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                alt="Banner"
+            />
         </div>
     )
 }

@@ -1,56 +1,501 @@
 const data = [
-    {
-      title: "Snacks & Munchies",
-      cards: [
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "9 MINS",
-          title: "Beanly Choco Hazelnut Spread with Breadsticks",
-          quantity: "23 g",
-          price: "99"
-        },
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "12 MINS",
-          title: "Turture",
-          quantity: "20 g",
-          price: "10"
-        },
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "15 MINS",
-          title: "Dairy Milk",
-          quantity: "50 g",
-          price: "255"
-        },
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "2 MINS",
-          title: "Maggie",
-          quantity: "200 g",
-          price: "54"
-        },
-      ]
-    },
-    {
-      title: "Snacks & Munchies",
-      cards: [
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "9 MINS",
-          title: "Beanly Choco Hazelnut Spread with Breadsticks",
-          quantity: "23 g",
-          price: "99"
-        },
-        {
-          img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png",
-          time: "9 MINS",
-          title: "Beanly Choco Hazelnut Spread with Breadsticks",
-          quantity: "23 g",
-          price: "99"
-        },
-      ]
-    },
-  ]
+  {
+    title: "Snacks & Munchies",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771780767527-1900.png",
+        time: "9 MINS",
+        title: "Beanly Choco Hazelnut Spread with Breadsticks",
+        quantity: "23 g",
+        price: "99"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/f55e87f5-ecab-4d91-aca9-62883084374d.png",
+        time: "12 MINS",
+        title: "Lay's Classic Salted Chips",
+        quantity: "26 g",
+        price: "20"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771395208762-1192.png",
+        time: "15 MINS",
+        title: "Dairy Milk Silk",
+        quantity: "60 g",
+        price: "99"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771303047485-42.png",
+        time: "8 MINS",
+        title: "Maggi 2-Minute Noodles",
+        quantity: "70 g",
+        price: "14"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/5e00a8e9-549b-442f-88e3-860f8533a3a1.png",
+        time: "10 MINS",
+        title: "Kurkure Masala Munch",
+        quantity: "90 g",
+        price: "30"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/1f97c6b8-6d92-424b-af2b-107de6e44a55.png",
+        time: "11 MINS",
+        title: "Oreo Original Biscuits",
+        quantity: "120 g",
+        price: "40"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770096717878-480.png",
+        time: "9 MINS",
+        title: "Haldiram's Aloo Bhujia",
+        quantity: "200 g",
+        price: "65"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/ff2b0c91-725f-407d-b545-25cfce225899.png",
+        time: "7 MINS",
+        title: "Pringles Original",
+        quantity: "107 g",
+        price: "199"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/a7d9598b-f76f-4d28-8e37-817bcaf108f1.png",
+        time: "13 MINS",
+        title: "Too Yumm Veggie Stix",
+        quantity: "30 g",
+        price: "20"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771602170375-190.png",
+        time: "10 MINS",
+        title: "Kit Kat Chocolate Bar",
+        quantity: "37 g",
+        price: "40"
+      },
+    ]
+  },
+  {
+    title: "Beverages",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770356946958-18.png",
+        time: "7 MINS",
+        title: "Coca-Cola Classic",
+        quantity: "750 ml",
+        price: "40"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/b329dcb8-edd2-406a-9575-40ef17b663ac.png",
+        time: "9 MINS",
+        title: "Tropicana Orange Juice",
+        quantity: "1 L",
+        price: "99"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/6f4bd423-1666-4d23-bf3d-db482be09608.png",
+        time: "6 MINS",
+        title: "Red Bull Energy Drink",
+        quantity: "250 ml",
+        price: "125"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770013136174-404.png",
+        time: "8 MINS",
+        title: "Lipton Green Tea",
+        quantity: "25 bags",
+        price: "85"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/2faf253a-7e5b-4d53-9774-350add8d50b5.png",
+        time: "10 MINS",
+        title: "Bisleri Mineral Water",
+        quantity: "1 L",
+        price: "20"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/07e1f443-9693-41ed-82a8-59e988aa9114.png",
+        time: "12 MINS",
+        title: "Nescafe Classic Instant Coffee",
+        quantity: "50 g",
+        price: "149"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/5356bfb5-414e-4a3c-b3c9-b818c10d5017.png",
+        time: "8 MINS",
+        title: "Sprite Lemon Lime",
+        quantity: "750 ml",
+        price: "40"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770356946958-58.png",
+        time: "9 MINS",
+        title: "Thums Up",
+        quantity: "750 ml",
+        price: "40"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/56d1c3f4-97bb-4b76-9681-e1c850f9e1af.png",
+        time: "11 MINS",
+        title: "Paperboat Aamras",
+        quantity: "200 ml",
+        price: "30"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/54fab895-d622-42a0-a976-3bfdffe99a36.png",
+        time: "7 MINS",
+        title: "Monster Energy Drink",
+        quantity: "500 ml",
+        price: "135"
+      },
+    ]
+  },
+  {
+    title: "Dairy & Breakfast",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/628c97e0-5ed4-425d-a667-1d3bfa6f0bde.png",
+        time: "8 MINS",
+        title: "Amul Full Cream Milk",
+        quantity: "500 ml",
+        price: "30"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/4e56db9f-aadf-4e00-9965-119d08d3de8d.png",
+        time: "10 MINS",
+        title: "Britannia Brown Bread",
+        quantity: "400 g",
+        price: "45"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/613787ac-f983-4cfb-b534-e219c8d47b39.png",
+        time: "9 MINS",
+        title: "Amul Butter",
+        quantity: "100 g",
+        price: "55"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/2193ef66-aa68-4736-9467-4d0e6e2b1376.png",
+        time: "11 MINS",
+        title: "Epigamia Greek Yogurt",
+        quantity: "90 g",
+        price: "40"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1772203307942-84.png",
+        time: "7 MINS",
+        title: "Kellogg's Corn Flakes",
+        quantity: "300 g",
+        price: "120"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/ace207d9-94a6-4bc5-9c12-bcd31372c013.png",
+        time: "13 MINS",
+        title: "Mother Dairy Paneer",
+        quantity: "200 g",
+        price: "89"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/852a402a-54ac-41d5-9263-187f4b077171.png",
+        time: "8 MINS",
+        title: "Amul Taaza Toned Milk",
+        quantity: "1 L",
+        price: "54"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/694b504a-892a-44d0-a73a-647edf8d1d0b.png",
+        time: "9 MINS",
+        title: "Britannia Cheese Slices",
+        quantity: "200 g",
+        price: "99"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/c8549033-8ab5-4411-981f-233d1bb37498.png",
+        time: "10 MINS",
+        title: "Quaker Oats",
+        quantity: "500 g",
+        price: "109"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/e7023096-622d-4e2e-9c2c-a7689262c36f.png",
+        time: "6 MINS",
+        title: "Amul Masti Dahi",
+        quantity: "400 g",
+        price: "42"
+      },
+    ]
+  },
+  {
+    title: "Fruits & Vegetables",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/a01fa4b1-0bfc-4e34-b1c8-ef2262d0bd8c.png",
+        time: "5 MINS",
+        title: "Fresh Banana",
+        quantity: "6 pcs (approx. 500 g)",
+        price: "35"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/4ea129f5-d31b-4c96-8825-3680f77f4c5c.png",
+        time: "6 MINS",
+        title: "Tomato",
+        quantity: "500 g",
+        price: "25"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/f53c1ea1-cfa0-438b-a14c-b4f5ebeed7dd.png",
+        time: "7 MINS",
+        title: "Onion",
+        quantity: "1 kg",
+        price: "45"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/eb5e81ea-171e-49d6-b256-b7ffb7eb7d36.png",
+        time: "8 MINS",
+        title: "Fresh Spinach",
+        quantity: "250 g",
+        price: "18"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/cf139842-03a4-4da6-843f-4e89a167f35e.png",
+        time: "9 MINS",
+        title: "Apple Shimla",
+        quantity: "4 pcs (approx. 600 g)",
+        price: "120"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/dac2a702-c38e-481f-b9b1-8a0accc40e1f.png",
+        time: "10 MINS",
+        title: "Baby Potatoes",
+        quantity: "500 g",
+        price: "39"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/0908a205-26bf-4135-969a-9002b302069c.png",
+        time: "6 MINS",
+        title: "Green Capsicum",
+        quantity: "250 g",
+        price: "22"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/1c5a3b5b-90dd-47c8-a4bc-39a137634dfb.png",
+        time: "7 MINS",
+        title: "Carrot",
+        quantity: "500 g",
+        price: "28"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/8060b52d-2232-4e13-9b31-b5423ef6cadc.png",
+        time: "8 MINS",
+        title: "Mango Alphonso",
+        quantity: "3 pcs (approx. 700 g)",
+        price: "149"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/60c2cecc-5df5-48f4-8a55-194914079d59.png",
+        time: "9 MINS",
+        title: "Cucumber",
+        quantity: "500 g",
+        price: "20"
+      },
+    ]
+  },
+  {
+    title: "Instant & Frozen Food",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771819828195-181.png",
+        time: "8 MINS",
+        title: "McCain Smiles Potato Snack",
+        quantity: "415 g",
+        price: "199"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/b0dfe9c1-ac5f-4f39-ac60-58b544138a55.png",
+        time: "10 MINS",
+        title: "Haldiram's Instant Poha",
+        quantity: "200 g",
+        price: "55"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/59da206c-523a-497f-859c-c7d8d47d8c5a.png",
+        time: "12 MINS",
+        title: "MTR Instant Upma Mix",
+        quantity: "160 g",
+        price: "48"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771305481383-4641.png",
+        time: "7 MINS",
+        title: "Sunfeast Yippee Noodles",
+        quantity: "75 g",
+        price: "14"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/e81534d6-48f0-40cd-b668-c77561260d94.png",
+        time: "9 MINS",
+        title: "Gits Gulab Jamun Mix",
+        quantity: "200 g",
+        price: "65"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771305481383-1413.png",
+        time: "11 MINS",
+        title: "Aashirvaad Instant Atta Noodles",
+        quantity: "140 g",
+        price: "30"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/ca3dade9-c80c-4b66-8994-d18379fd9d32.png",
+        time: "9 MINS",
+        title: "ITC Master Chef Shahi Paneer",
+        quantity: "285 g",
+        price: "159"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/cc51f45a-452a-491f-948a-fffe09e6c3ef.png",
+        time: "10 MINS",
+        title: "McCain French Fries",
+        quantity: "420 g",
+        price: "189"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770195887273-71.png",
+        time: "8 MINS",
+        title: "MTR Instant Rava Idli Mix",
+        quantity: "500 g",
+        price: "95"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770870008650-1276.png",
+        time: "12 MINS",
+        title: "Knorr Tomato Soup",
+        quantity: "43 g",
+        price: "35"
+      },
+    ]
+  },
+  {
+    title: "Personal Care",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/49731d3e-67bc-4b4a-80ac-217091d2d513.png?bg_token=Colour%2Fsurface%2F00FFFFFF",
+        time: "9 MINS",
+        title: "Dove Deeply Nourishing Body Wash",
+        quantity: "190 ml",
+        price: "249"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771923717021-1559.png",
+        time: "10 MINS",
+        title: "Head & Shoulders Anti-Dandruff Shampoo",
+        quantity: "340 ml",
+        price: "299"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771221584742-141.png",
+        time: "8 MINS",
+        title: "Colgate Strong Teeth Toothpaste",
+        quantity: "300 g",
+        price: "89"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/c506b13c-453c-4f51-b4eb-0c1efe93dda5.png",
+        time: "11 MINS",
+        title: "Gillette Mach3 Razor",
+        quantity: "1 pc",
+        price: "149"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/9a62c64a-cf65-4c0d-83ac-6b59ae83ab26.png",
+        time: "7 MINS",
+        title: "Dettol Original Hand Wash",
+        quantity: "200 ml",
+        price: "69"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/a94f1507-47aa-49b8-818e-c6e6c2b35e5d.png",
+        time: "9 MINS",
+        title: "Vaseline Intensive Care Body Lotion",
+        quantity: "295 ml",
+        price: "199"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1770696534079-1256.png",
+        time: "10 MINS",
+        title: "Nivea Men Face Wash",
+        quantity: "100 ml",
+        price: "149"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771923717021-2205.png",
+        time: "12 MINS",
+        title: "Pantene Smooth & Silky Shampoo",
+        quantity: "340 ml",
+        price: "275"
+      },
+    ]
+  },
+  {
+    title: "Cleaning & Household",
+    cards: [
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/83ec4dd2-72f6-4c64-9a37-c38b32612db8.png",
+        time: "10 MINS",
+        title: "Surf Excel Easy Wash Detergent",
+        quantity: "1 kg",
+        price: "119"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/78958301-ced4-4c8a-965d-557816188552.png",
+        time: "9 MINS",
+        title: "Vim Dishwash Bar",
+        quantity: "300 g",
+        price: "39"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/553b5da7-e41a-4a32-9c37-ffbf1ff072f6.png",
+        time: "11 MINS",
+        title: "Harpic Power Plus Toilet Cleaner",
+        quantity: "1 L",
+        price: "149"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/d47ed039-5c5f-427e-a1e4-75d7da3df1e9.png",
+        time: "8 MINS",
+        title: "Colin Glass Cleaner",
+        quantity: "500 ml",
+        price: "109"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/69ddb2e0-cb3e-4f1a-87ec-1841b5214c48.png",
+        time: "7 MINS",
+        title: "Lizol Floor Cleaner",
+        quantity: "975 ml",
+        price: "189"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/rc-upload-1771817802649-556.png",
+        time: "9 MINS",
+        title: "Ariel Matic Detergent Powder",
+        quantity: "1 kg",
+        price: "179"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/6b171896-87a6-455f-a8a8-7497a999f492.png",
+        time: "12 MINS",
+        title: "Good Knight Coil",
+        quantity: "10 pcs",
+        price: "39"
+      },
+      {
+        img: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/2653898f-bd4e-43b1-b817-16709fa25416.png",
+        time: "10 MINS",
+        title: "Comfort After Wash Fabric Conditioner",
+        quantity: "860 ml",
+        price: "199"
+      },
+    ]
+  },
+]
 
-  export default data
+export default data
