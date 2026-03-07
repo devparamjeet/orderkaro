@@ -5,8 +5,11 @@ import MiniCard from './components/MiniCard'
 import Product from './components/Product'
 import products from './utils/data'
 import Footer from './components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const App = () => {
+
+  let navigate = useNavigate()
 
   const [imgURL, setImgURL] = useState([
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
@@ -31,6 +34,9 @@ const App = () => {
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png"
   ])
 
+  let handleBannerCard = () =>{
+    navigate("/banner")
+  }
 
   return (
     <div className='w-full min-h-screen flex flex-col bg-gray-50'>
@@ -39,7 +45,7 @@ const App = () => {
       <section className='flex-1 px-4 sm:px-8 md:px-12 lg:px-20 pb-10'>
 
         {/* Hero Banner */}
-        <div className='hidden sm:block mt-6 w-full h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden'>
+        <div onClick={handleBannerCard} className='hidden sm:block mt-6 w-full h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden'>
           <img
             src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2026-01/Frame-1437256605-2-2.jpg"
             className='w-full h-full object-cover scale-[1.02] transition-transform duration-500'
@@ -49,9 +55,9 @@ const App = () => {
 
         {/* Sub Banners */}
         <div className='hidden sm:grid mt-4 w-full grid-cols-4 gap-4'>
-          <BannerCard img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg" />
-          <BannerCard img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/pet_crystal_WEB-1.png" />
-          <BannerCard img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/baby_crystal_WEB-1.png" />
+          <BannerCard handleBannerCard={handleBannerCard}  img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg" />
+          <BannerCard handleBannerCard={handleBannerCard} img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/pet_crystal_WEB-1.png" />
+          <BannerCard handleBannerCard={handleBannerCard} img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/baby_crystal_WEB-1.png" />
         </div>
 
         {/* Categories */}

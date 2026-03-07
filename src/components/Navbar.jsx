@@ -4,8 +4,10 @@ import { MdOutlineElectricBolt } from 'react-icons/md'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 import { FiUser } from 'react-icons/fi'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+    let navigate = useNavigate()
     const [menuOpen, setMenuOpen] = useState(false)
     const [searchOpen, setSearchOpen] = useState(false)
 
@@ -46,7 +48,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Search Bar */}
-                    <div className='flex-1 hidden sm:flex items-center px-2'>
+                    <div onClick={()=>{navigate('/s')}} className='flex-1 hidden sm:flex items-center px-2'>
                         <div className='relative w-full max-w-2xl'>
                             <IoSearchOutline className='absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none' />
                             <input
@@ -75,8 +77,14 @@ const Navbar = () => {
                             Login
                         </button>
 
+                        {/* Products */}
+                        <button className='hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-xl text-gray-700 hover:bg-gray-100 transition-colors'>
+                            <FiUser className='text-base' />
+                            <Link to="/product">Product</Link>
+                        </button>
+
                         {/* Cart */}
-                        <button className='inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200'>
+                        <button onClick={()=>{navigate('/cart')}} className='inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200'>
                             <IoCartOutline className='text-lg' />
                             <span className='hidden sm:inline'>My Cart</span>
                             <span className='bg-white text-green-600 text-[11px] font-extrabold rounded-full w-5 h-5 flex items-center justify-center leading-none'>

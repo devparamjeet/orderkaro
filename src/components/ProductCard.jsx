@@ -1,17 +1,24 @@
 import React from 'react'
 import { IoCartOutline } from 'react-icons/io5'
 import { MdOutlineElectricBolt } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const ProductCard = (props) => {
+    let navigate =  useNavigate()
+
+    let handleProduct = () =>{
+        navigate('/product')
+    }
+
     return (
         <div className='group flex flex-col h-[350px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden'>
 
             {/* Image */}
-            <div className='w-full aspect-square bg-gray-50 overflow-hidden p-3'>
+            <div onClick={handleProduct} className='w-full aspect-square bg-gray-50 overflow-hidden p-3'>
                 <img
                     src={props.data.img}
                     alt={props.data.title}
-                    className='w-full h-full object-contain group-hover:scale-105 transition-transform duration-300'
+                    className='w-full cursor-pointer h-full object-contain group-hover:scale-105 transition-transform duration-300'
                 />
             </div>
 
