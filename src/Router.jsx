@@ -8,27 +8,23 @@ import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Search from './pages/Search';
 import BannerPage from './pages/BannerPage';
+import MainOutlet from './components/MainOutlet';
 
 let route = createBrowserRouter([
+
   {
-    path : "/",
-    element : <App />
+    path: "/",
+    element: <MainOutlet />,
+    children: [
+      { index: true, element: <App /> },
+      { path: "product", element: <Product /> },
+      { path: "cart", element: <Cart /> },
+      { path: "banner", element: <BannerPage /> },
+    ]
   },
   {
-    path : "/product",
-    element : <Product />
-  },
-  {
-    path : "/cart",
-    element : <Cart />
-  },
-  {
-    path : "/s",
-    element : <Search />
-  },
-  {
-    path : "/banner",
-    element : <BannerPage />
+    path: "/s",
+    element: <Search />
   },
 ])
 

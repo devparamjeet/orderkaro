@@ -6,7 +6,7 @@ import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 import { FiUser } from 'react-icons/fi'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
     let navigate = useNavigate()
     const [menuOpen, setMenuOpen] = useState(false)
     const [searchOpen, setSearchOpen] = useState(false)
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <div className='flex items-center h-[68px] gap-4'>
 
                     {/* Logo */}
-                    <div className='shrink-0 w-36 sm:w-44'>
+                    <div onClick={() => { navigate("/") }} className='cursor-pointer shrink-0 w-36 sm:w-44'>
                         <img
                             className='w-full h-14 object-contain'
                             src="/orderkarologo.png"
@@ -48,7 +48,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Search Bar */}
-                    <div onClick={()=>{navigate('/s')}} className='flex-1 hidden sm:flex items-center px-2'>
+                    <div onClick={() => { navigate('/s') }} className='flex-1 hidden sm:flex items-center px-2'>
                         <div className='relative w-full max-w-2xl'>
                             <IoSearchOutline className='absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-lg pointer-events-none' />
                             <input
@@ -84,11 +84,11 @@ const Navbar = () => {
                         </button>
 
                         {/* Cart */}
-                        <button onClick={()=>{navigate('/cart')}} className='inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200'>
+                        <button onClick={() => { navigate('/cart') }} className='inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200'>
                             <IoCartOutline className='text-lg' />
                             <span className='hidden sm:inline'>My Cart</span>
                             <span className='bg-white text-green-600 text-[11px] font-extrabold rounded-full w-5 h-5 flex items-center justify-center leading-none'>
-                                0
+                                {props.items}
                             </span>
                         </button>
 

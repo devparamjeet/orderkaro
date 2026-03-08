@@ -4,11 +4,11 @@ import ProductCard from './ProductCard'
 
 const VISIBLE = 6
 
-const Product = ({ data }) => {
+const Product = (props) => {
     const scrollRef = useRef(null)
     const [canScrollLeft, setCanScrollLeft] = useState(false)
     const [canScrollRight, setCanScrollRight] = useState(false)
-    const isSlider = data.cards.length > VISIBLE
+    const isSlider = props.data.cards.length > VISIBLE
 
     const updateArrows = () => {
         const el = scrollRef.current
@@ -40,7 +40,7 @@ const Product = ({ data }) => {
         <div className='w-full'>
             {/* Section Header */}
             <div className='flex items-center justify-between mb-4'>
-                <h2 className='text-xl font-bold text-gray-900'>{data.title}</h2>
+                <h2 className='text-xl font-bold text-gray-900'>{props.data.title}</h2>
                 <div className='flex items-center gap-2'>
                     {isSlider && (
                         <>
@@ -72,16 +72,16 @@ const Product = ({ data }) => {
                     ref={scrollRef}
                     className='flex gap-4 overflow-x-auto scroll-smooth pb-2 scrollbar-hide'
                 >
-                    {data.cards.map((value, idx) => (
+                    {props.data.cards.map((value, idx) => (
                         <div key={idx} className='shrink-0 w-[180px] sm:w-[200px]'>
-                            <ProductCard data={value} />
+                            <ProductCard data={value}  items={props.items} setItems={props.setItems} />
                         </div>
                     ))}
                 </div>
             ) : (
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4'>
-                    {data.cards.map((value, idx) => (
-                        <ProductCard key={idx} data={value} />
+                    {props.data.cards.map((value, idx) => (
+                        <ProductCard key={idx} data={value}  items={props.items} setItems={props.setItems} />
                     ))}
                 </div>
             )}

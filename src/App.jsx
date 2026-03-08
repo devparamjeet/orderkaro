@@ -5,11 +5,13 @@ import MiniCard from './components/MiniCard'
 import Product from './components/Product'
 import products from './utils/data'
 import Footer from './components/Footer'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useOutletContext } from 'react-router-dom'
 
 const App = () => {
 
   let navigate = useNavigate()
+
+  const [items, setItems] = useOutletContext()
 
   const [imgURL, setImgURL] = useState([
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
@@ -39,8 +41,6 @@ const App = () => {
   }
 
   return (
-    <div className='w-full min-h-screen flex flex-col bg-gray-50'>
-      <Navbar />
 
       <section className='flex-1 px-4 sm:px-8 md:px-12 lg:px-20 pb-10'>
 
@@ -73,14 +73,11 @@ const App = () => {
         {/* Product Sections */}
         <div className='mt-10 space-y-10'>
           {products.map((value, idx) => (
-            <Product key={idx} data={value} />
+            <Product key={idx} data={value} items={items} setItems={setItems} />
           ))}
         </div>
 
       </section>
-
-      <Footer />
-    </div>
   )
 }
 

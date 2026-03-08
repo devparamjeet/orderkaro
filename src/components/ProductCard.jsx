@@ -10,6 +10,11 @@ const ProductCard = (props) => {
         navigate('/product')
     }
 
+    let handleAdd = () =>{
+        // console.log(props.items)
+        props.setItems(props.items + 1)
+    }
+
     return (
         <div className='group flex flex-col h-[350px] bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden'>
 
@@ -41,7 +46,7 @@ const ProductCard = (props) => {
                 {/* Price + Add */}
                 <div className='flex items-center justify-between mt-auto pt-2'>
                     <span className='text-sm font-bold text-gray-900'>₹{props.data.price}</span>
-                    <button className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-green-600 border border-green-500 rounded-lg hover:bg-green-500 hover:text-white active:bg-green-600 transition-colors cursor-pointer'>
+                    <button onClick={handleAdd} className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-green-600 border border-green-500 rounded-lg hover:bg-green-500 hover:text-white active:bg-green-600 transition-colors cursor-pointer'>
                         <IoCartOutline className='text-sm' />
                         ADD
                     </button>
