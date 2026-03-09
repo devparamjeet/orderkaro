@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaMinus } from 'react-icons/fa6'
+import { IoIosAdd } from 'react-icons/io'
 import { IoCartOutline } from 'react-icons/io5'
-import { MdOutlineElectricBolt } from 'react-icons/md'
+import { MdAdd, MdOutlineElectricBolt } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
 const ProductCard = (props) => {
-    let navigate =  useNavigate()
+    let navigate = useNavigate()
 
-    let handleProduct = () =>{
+    const [count, setCount] = useState(0)
+
+    let handleProduct = () => {
         navigate('/product')
     }
 
-    let handleAdd = () =>{
-        // console.log(props.items)
+    let handleAdd = () => {
+        setCount(count + 1)
         props.setItems(props.items + 1)
+        props.setPrice(Number(props.price) + Number(props.data.price))
     }
 
     return (
@@ -46,10 +51,21 @@ const ProductCard = (props) => {
                 {/* Price + Add */}
                 <div className='flex items-center justify-between mt-auto pt-2'>
                     <span className='text-sm font-bold text-gray-900'>₹{props.data.price}</span>
-                    <button onClick={handleAdd} className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-green-600 border border-green-500 rounded-lg hover:bg-green-500 hover:text-white active:bg-green-600 transition-colors cursor-pointer'>
+
+                    {count > 0 ? <button className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold border border-white rounded-lg bg-green-500 text-white transition-colors cursor-pointer'>
+                        <FaMinus onClick={() => {
+                            setCount(count - 1)
+                            props.setItems(props.items - 1)
+                            props.setPrice(Number(props.price) - Number(props.data.price))
+                        }} className='text-sm' />
+                        {count}
+                        <MdAdd onClick={handleAdd} className='text-sm' />
+                    </button> : <button onClick={handleAdd} className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-green-600 border border-green-500 rounded-lg hover:bg-green-500 hover:text-white active:bg-green-600 transition-colors cursor-pointer'>
                         <IoCartOutline className='text-sm' />
                         ADD
                     </button>
+                    }
+
                 </div>
             </div>
         </div>

@@ -84,12 +84,13 @@ const Navbar = (props) => {
                         </button>
 
                         {/* Cart */}
-                        <button onClick={() => { navigate('/cart') }} className='inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200'>
+                        <button onClick={() => { navigate('/cart') }} className={`inline-flex items-center gap-2 px-4 py-2.5 ${props.items === 0 ? 'bg-gray-500 hover:bg-gray-600' : 'bg-green-500 hover:bg-green-600'}  active:bg-green-700 text-white text-sm font-bold rounded-xl transition-colors shadow-sm shadow-green-200`}>
                             <IoCartOutline className='text-lg' />
                             <span className='hidden sm:inline'>My Cart</span>
                             <span className='bg-white text-green-600 text-[11px] font-extrabold rounded-full w-5 h-5 flex items-center justify-center leading-none'>
                                 {props.items}
                             </span>
+                            {props.price > 0 ? <span className='text-white text-[15px]'>{props.price}/-</span> : <></>}
                         </button>
 
                         {/* Mobile: Hamburger */}

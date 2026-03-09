@@ -6,11 +6,12 @@ import { Outlet } from 'react-router-dom'
 const MainOutlet = () => {
 
   const [items, setItems] = useState(0)
+  const [price, setPrice] = useState(0)
 
   return (
     <>
-      <Navbar items={items} />
-      <Outlet context={[items , setItems]} />
+      <Navbar items={items} price={price}/>
+      <Outlet context={{items , setItems, price, setPrice}} />
       <Footer />
     </>
   )

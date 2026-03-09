@@ -74,14 +74,14 @@ const Product = (props) => {
                 >
                     {props.data.cards.map((value, idx) => (
                         <div key={idx} className='shrink-0 w-[180px] sm:w-[200px]'>
-                            <ProductCard data={value}  items={props.items} setItems={props.setItems} />
+                            <ProductCard data={value} price={props.price} setPrice={props.setPrice}  items={props.items} setItems={props.setItems} />
                         </div>
                     ))}
                 </div>
             ) : (
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4'>
                     {props.data.cards.map((value, idx) => (
-                        <ProductCard key={idx} data={value}  items={props.items} setItems={props.setItems} />
+                        <ProductCard key={idx} data={value} price={props.price} setPrice={props.setPrice} items={props.items} setItems={props.setItems} />
                     ))}
                 </div>
             )}

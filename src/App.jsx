@@ -11,7 +11,7 @@ const App = () => {
 
   let navigate = useNavigate()
 
-  const [items, setItems] = useOutletContext()
+  const {items, setItems, price, setPrice} = useOutletContext()
 
   const [imgURL, setImgURL] = useState([
     "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
@@ -73,7 +73,7 @@ const App = () => {
         {/* Product Sections */}
         <div className='mt-10 space-y-10'>
           {products.map((value, idx) => (
-            <Product key={idx} data={value} items={items} setItems={setItems} />
+            <Product key={idx} data={value} items={items} setItems={setItems} price={price} setPrice={setPrice}/>
           ))}
         </div>
 
