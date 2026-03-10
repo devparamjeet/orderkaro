@@ -9,6 +9,7 @@ import Cart from './pages/Cart';
 import Search from './pages/Search';
 import BannerPage from './pages/BannerPage';
 import MainOutlet from './components/MainOutlet';
+import Cateogry from './pages/Cateogry';
 
 let route = createBrowserRouter([
 
@@ -20,6 +21,7 @@ let route = createBrowserRouter([
       { path: "product", element: <Product /> },
       { path: "cart", element: <Cart /> },
       { path: "banner", element: <BannerPage /> },
+      { path: "cateogry", element: <Cateogry /> },
     ]
   },
   {

@@ -1,10 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import ProductCard from './ProductCard'
+import { useNavigate } from 'react-router-dom'
 
 const VISIBLE = 6
 
 const Product = (props) => {
+
+    let redirect = useNavigate()
+    
     const scrollRef = useRef(null)
     const [canScrollLeft, setCanScrollLeft] = useState(false)
     const [canScrollRight, setCanScrollRight] = useState(false)
@@ -60,7 +64,11 @@ const Product = (props) => {
                             </button>
                         </>
                     )}
-                    <button className='text-sm font-semibold text-green-600 hover:text-green-700 hover:underline transition-colors'>
+                    <button onClick={()=>{
+                        // To store data in localStorage
+                        localStorage.setItem("prod_id", JSON.stringify(props.data.id))
+                        redirect("/cateogry")
+                        }} className='text-sm font-semibold text-green-600 hover:text-green-700 hover:underline transition-colors'>
                         See all →
                     </button>
                 </div>
