@@ -11,7 +11,7 @@ const App = () => {
   let navigate = useNavigate()
   let [products, setProducts] = useState([])
 
-  const { items, setItems, price, setPrice } = useOutletContext()
+  const { items, setItems, price, setPrice, addToCart, removeFromCart } = useOutletContext()
 
   useEffect(() => {
     let fetchData = async () => {
@@ -82,7 +82,7 @@ const App = () => {
       {/* Product Sections */}
       <div className='mt-10 space-y-10'>
         {products.map((value, idx) => (
-          <Product key={idx} data={value} items={items} setItems={setItems} price={price} setPrice={setPrice} />
+          <Product key={idx} data={value} items={items} setItems={setItems} price={price} setPrice={setPrice} addToCart={addToCart} removeFromCart={removeFromCart} />
         ))}
       </div>
 

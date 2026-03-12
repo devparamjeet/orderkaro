@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaMinus } from 'react-icons/fa6'
 import { IoIosAdd } from 'react-icons/io'
 import { IoCartOutline } from 'react-icons/io5'
@@ -18,6 +18,7 @@ const ProductCard = (props) => {
         setCount(count + 1)
         props.setItems(props.items + 1)
         props.setPrice(Number(props.price) + Number(props.data.price))
+        props.addToCart(props.data.id)
     }
 
     return (
@@ -54,9 +55,12 @@ const ProductCard = (props) => {
 
                     {count > 0 ? <button className='inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold border border-white rounded-lg bg-green-500 text-white transition-colors cursor-pointer'>
                         <FaMinus onClick={() => {
+
                             setCount(count - 1)
                             props.setItems(props.items - 1)
                             props.setPrice(Number(props.price) - Number(props.data.price))
+                            props.removeFromCart(props.data.id)
+
                         }} className='text-sm' />
                         {count}
                         <MdAdd onClick={handleAdd} className='text-sm' />
