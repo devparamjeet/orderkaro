@@ -2,7 +2,7 @@ import React from 'react'
 
 const BannerCard = (props) => {
     return (
-        <div onClick={props.handleBannerCard} className='w-full h-36 sm:h-40 md:h-48 rounded-2xl overflow-hidden shadow-sm group cursor-pointer'>
+        <div onClick={props.handleBannerCard} className='w-full h-36 sm:h-40 md:h-40 rounded-2xl overflow-hidden shadow-sm group cursor-pointer'>
             <img
                 src={props.img}
                 className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'

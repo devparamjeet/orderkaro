@@ -54,9 +54,9 @@ const App = () => {
 
     <section className='flex-1 px-4 sm:px-8 md:px-12 lg:px-20 pb-10'>
       {/* Hero Banner */}
-      <div onClick={handleBannerCard} className='hidden sm:block mt-6 w-full h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden'>
+      <div onClick={handleBannerCard} className='hidden sm:block mt-6 w-full h-56 md:h-64 lg:h-64 rounded-2xl overflow-hidden'>
         <img
-          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2026-01/Frame-1437256605-2-2.jpg"
+          src="/banner1.png"
           className='w-full h-full object-cover scale-[1.02] transition-transform duration-500'
           alt="Hero Banner"
         />
@@ -64,9 +64,9 @@ const App = () => {
 
       {/* Sub Banners */}
       <div className='hidden sm:grid mt-4 w-full grid-cols-4 gap-4'>
-        <BannerCard handleBannerCard={handleBannerCard} img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg" />
-        <BannerCard handleBannerCard={handleBannerCard} img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/pet_crystal_WEB-1.png" />
-        <BannerCard handleBannerCard={handleBannerCard} img="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/baby_crystal_WEB-1.png" />
+        <BannerCard handleBannerCard={handleBannerCard} img="/banner2.png" />
+        <BannerCard handleBannerCard={handleBannerCard} img="/banner3.png" />
+        <BannerCard handleBannerCard={handleBannerCard} img="/banner4.png" />
       </div>
 
       {/* Categories */}

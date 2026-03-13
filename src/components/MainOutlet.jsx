@@ -30,12 +30,12 @@ const MainOutlet = () => {
 
   }
 
-  console.log(productdata)
+  // console.log(productdata)
 
   return (
     <>
       <Navbar items={items} price={price} />
-      <Outlet context={{ items, setItems, price, setPrice, addToCart , removeFromCart }} />
+      <Outlet context={{ items, setItems, price, setPrice, addToCart , removeFromCart, productdata }} />
       <Footer />
     </>
   )
