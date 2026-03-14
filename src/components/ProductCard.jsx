@@ -8,7 +8,21 @@ import { useNavigate } from 'react-router-dom'
 const ProductCard = (props) => {
     let navigate = useNavigate()
 
+    let productsData = JSON.parse(localStorage.getItem("products"))
     const [count, setCount] = useState(0)
+    
+    useEffect(()=>{
+        let product = productsData.find((value)=>{
+            return props.data.id === value.prod_id
+        })
+
+        if(product){
+            setCount(product.quantity)
+        }
+        else{
+            setCount(0)
+        }
+    },[productsData])
 
     let handleProduct = () => {
         navigate('/product')

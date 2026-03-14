@@ -5,7 +5,7 @@ import { BiLeftArrowCircle } from 'react-icons/bi'
 
 const Cateogry = () => {
     let redirect = useNavigate()
-  const { items, setItems, price, setPrice } = useOutletContext()
+  const { items, setItems, price, setPrice,addToCart, removeFromCart } = useOutletContext()
 
     let id = JSON.parse(localStorage.getItem("prod_id"))
     // console.log(id)
@@ -32,7 +32,7 @@ const Cateogry = () => {
             <br />
             <div className='grid grid-cols-5 gap-5 w-full'>
                 {!data?.cards ? <></> : data.cards.map((val) => {
-                    return <ProductCard data={val} price={price} setPrice={setPrice}  items={items} setItems={setItems} />
+                    return <ProductCard data={val} price={price} setPrice={setPrice}  items={items} setItems={setItems} addToCart={addToCart} removeFromCart={removeFromCart} />
                 })}
             </div>
             <br />
