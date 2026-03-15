@@ -36,24 +36,13 @@ const MainOutlet = () => {
 
   let removeFromCart = (id) => {
     setProductdata((prev) => {
-      let index ;
-      let checkProduct = prev.find((val) => {
-        return val.prod_id === id
-      })
-      // console.log(checkProduct)
-      if (checkProduct) {
-        return prev.map((item, index) => {
-          return item.quantity > 1 ? item.prod_id === id ? { ...item, quantity: item.quantity - 1 } : item : prev.splice(index, 1)
-        })
-      }
 
-      else {
-        return [...prev]
-      }
+      return prev.map((item) => {
+        return item.prod_id === id ? { ...item, quantity: item.quantity - 1 } : item
+      }).filter((item) => { return item.quantity > 0 })
+
     })
   }
-
-  // console.log(productdata)
 
   return (
     <>

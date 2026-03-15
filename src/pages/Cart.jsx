@@ -5,7 +5,7 @@ import CartProductCard from '../components/CartProductCard'
 
 const Cart = () => {
 
-  const { productdata } = useOutletContext()
+  const { items, setItems, price, setPrice, productdata, addToCart, removeFromCart } = useOutletContext()
   const [products, setProducts] = useState([])
 
   let filterData = (arr) =>{
@@ -38,13 +38,13 @@ const Cart = () => {
       adjustData(res)
     }
     fetchData()
-  },[])
+  },[products])
 
   // console.log(products)
   return (
     <div className='flex flex-col p-20'>
       {products.map((value)=>{
-        return <CartProductCard data={value}/>
+        return <CartProductCard items={items} setItems={setItems} data={value} price={price} setPrice={setPrice} addToCart={addToCart} removeFromCart={removeFromCart}/>
       })}
     </div>
   )
